@@ -19,7 +19,6 @@ export class CaptureDegreeComponent {
   enteredFaculty ='';
   enteredCost = '';
 
-   data = this.enteredModules.split(",");
   
  
 
@@ -33,23 +32,20 @@ export class CaptureDegreeComponent {
    }
 
   onSubmit(){
+    let data =  this.enteredModules.split(",");
      
    this.dataService.captureDegree({
     name :this.enteredName,
     noOfYears : +this.enteredYears,
-    modules :  this.enteredModules.split(","),
+    modules :  data,
     falcalty : this.enteredFaculty,
-    cost : +this.enteredCost,
-
+    cost : +this.enteredCost
     
 
    }
   
     
   );
-  for(let i =0 ; i< this.data.length; i++){
-    console.log(this.data[i]);
-  }
   
     };
     
