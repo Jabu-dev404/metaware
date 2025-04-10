@@ -1,0 +1,11 @@
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C0950;
+    color: white;
+    margin-left: 400px;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+}
