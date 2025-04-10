@@ -1,0 +1,35 @@
+
+<div id="form">
+<form (ngSubmit)="onSubmit()">
+    <h1>Capture Degree</h1>
+
+    <p>
+    <label id="name">Name</label>
+    <input  id="name"  name="name"type="string"  [(ngModel)]="enteredName"/>
+    </p>
+
+    <p>
+    <label>Number of years</label>
+    <input id="numberofYears" name="numberofYears" type= "string" [(ngModel)]="enteredYears" />
+    </p>
+
+
+     <p>
+    <label id="modules">Modules</label>
+    <input id="modules" name="modules"  type="string" [(ngModel)]="enteredModules"/>
+    </p>
+
+    <p>
+    <label id="faculty">Faculty</label>
+    <input id="faculty"  name="faculty" type="string" [(ngModel)]="enteredFaculty"/>
+    </p>
+
+    <p>
+    <label id="cost">Cost of degree</label>
+    <input id="cost"  name ="cost" type="number" [(ngModel)]="enteredCost"/>
+    </p>
+
+    <button>Submit</button>
+
+</form>
+</div>
