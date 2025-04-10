@@ -5,8 +5,8 @@ import { Degree } from "./models/degree.model";
 export class DataService{
     degrees ? : Degree[];  
     option = [{
-        id : 0,
-        name : ''
+        id : "o1",
+        name : 'Register'
 
     }]
     captureDegree(degree :Degree){
