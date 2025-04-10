@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-option',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './option.component.css'
 })
 export class OptionComponent {
+private dataService = inject(DataService);
 
+ options = this.dataService.option
 }
+
