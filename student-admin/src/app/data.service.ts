@@ -10,10 +10,12 @@ export class DataService{
 
     }]
     captureDegree(degree :Degree){
+        this.degrees = [];
         for(let i =0 ; i< degree.modules.length; i++){
             console.log(degree.modules[i]);
           }
           
         this.degrees?.push(degree)
+        console.log(this.degrees?.length)
     }
 }
