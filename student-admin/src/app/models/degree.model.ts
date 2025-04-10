@@ -1,7 +1,7 @@
 export interface Degree{
     name :string
     noOfYears : number
-    modules :[]
+    modules :string[]
     falcalty :string
     cost :number
 
