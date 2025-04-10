@@ -1,1 +1,22 @@
- 
+ main {
+   margin-top: 10px;   
+    border: solid #0C0950;
+ }
+
+ #options {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 300px;
+    height: 500px;
+    border: solid #0C0950;
+
+ }
+
+ #view-selected-option {
+    width: 800px;
+    height: 400px;
+    border: solid #0C0950;
+    margin-left: 420px;
+    position: relative;
+    bottom: 505px;
+ }
