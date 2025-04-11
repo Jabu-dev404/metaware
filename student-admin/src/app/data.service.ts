@@ -44,7 +44,7 @@ export class DataService {
 
     captureStudents(student:Student) {
          
-        console.log(this.students.length)
+        this.students.push(student);
     }
 
 }
