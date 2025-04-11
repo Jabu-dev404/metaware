@@ -4,6 +4,13 @@ import { Student} from "./models/student.model";
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
+    match1 ={
+        name :'',
+    noOfYears : 0,
+    modules :[''],
+    falcalty :'',
+    cost :0
+    };
     private degrees: Degree[] = []
     private students: Student[] = []
     option = [{
@@ -19,14 +26,18 @@ export class DataService {
         return this.degrees
     }
 
-    get viewStudents(){
-        return this.students 
-    }
+ 
+    captureResults(studentNumber: string){   
+        this.match1 = this.degrees.find((degree) => degree.name === studentNumber)!
+        console.log(this.match1.name)
+     }
+     get match(){
+        return this.match1;
+     }
+     
 
-    captureResults(studentNumber: number){
-        console.log(studentNumber);
 
-    }
+    
 
     captureStudents(student:Student) {
          
