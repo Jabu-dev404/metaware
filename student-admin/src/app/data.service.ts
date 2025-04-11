@@ -1,9 +1,18 @@
 import { Injectable } from "@angular/core";
 import { Degree } from "./models/degree.model";
+import { Student} from "./models/student.model";
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
+    match1 ={
+        name :'',
+    noOfYears : 0,
+    modules :[''],
+    falcalty :'',
+    cost :0
+    };
     private degrees: Degree[] = []
+    private students: Student[] = []
     option = [{
         id: "o1",
         name: 'Register'
@@ -17,9 +26,22 @@ export class DataService {
         return this.degrees
     }
 
-    captureResults(studentNumber: number){
-        console.log(studentNumber);
+ 
+    captureResults(studentNumber: string){   
+        this.match1 = this.degrees.find((degree) => degree.name === studentNumber)!
+        console.log(this.match1.name)
+     }
+     get viewStudents() {
+        return this.students;
+     }
+     
 
+
+    
+
+    captureStudents(student:Student) {
+         
+        this.students.push(student);
     }
 
     

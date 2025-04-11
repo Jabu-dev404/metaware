@@ -9,7 +9,7 @@
 
         <p>
             <label for="studentnumber">Student Number</label>
-            <input id="studentnumber" name="studentnumber" type="number" [(ngModel)]="enteredStudentNumber"/>
+            <input id="studentnumber" name="studentnumber" type="string" [(ngModel)]="enteredStudentNumber"/>
         </p>
 
         
@@ -17,5 +17,20 @@
         <button>Submit</button>
 
 
+
+
     </form>
+</div>
+
+<div>
+    <form id="forms">
+        <h1>Student Information</h1>
+       <p> <label for="name">{{results.name}}</label></p>
+       <p> <label for="surname">{{results.noOfYears}}</label></p>
+        <p><label for="studentnumber">{{results.cost}}</label></p>
+
+
+    </form>
+    
+    
 </div>
