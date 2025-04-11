@@ -6,3 +6,4 @@ export interface Degree{
     cost :number
 
 }
+

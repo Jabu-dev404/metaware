@@ -16,4 +16,11 @@ export class DataService {
     get viewDegree() {
         return this.degrees
     }
+
+    captureResults(studentNumber: number){
+        console.log(studentNumber);
+
+    }
+
 }
+
