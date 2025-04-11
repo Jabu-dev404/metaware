@@ -3,6 +3,8 @@ import { CaptureDegreeComponent } from './capture-degree/capture-degree.componen
 import { Component } from '@angular/core';
 import { ViewResultsComponent } from './components/view-results/view-results.component';
 import { CaptureStudentComponent } from './components/capture-student/capture-student.component';
+import { CaptureResultsComponent } from './components/capture-results/capture-results.component';
+import { ViewDegreeComponent } from './view-degree/view-degree.component';
 
 export const routes: Routes = [
     {
@@ -17,6 +19,17 @@ export const routes: Routes = [
     path:'capturestudent',
     component:CaptureStudentComponent,
     },
+    {
+        path:'captureresults',
+        component:CaptureResultsComponent,
+    },
+
+    {
+        path:'viewdegree',
+        component:ViewDegreeComponent
+    },
+
+    
         
         
     

@@ -1,1 +1,11 @@
-<p>view-results works!</p>
+
+<div>
+<form (ngSubmit)="onSubmit()">
+    <h1>View Results</h1>
+
+    <label id="studentnumber">Enter student number </label>
+    <input id="studentnumber"  name="studentnumber" type="number" [(ngModel)]="enteredStudentNumber"/>
+ <button>Submit</button>
+</form>
+  </div> 
+    
