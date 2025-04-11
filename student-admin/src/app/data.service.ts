@@ -25,6 +25,9 @@ export class DataService {
 
     captureResults(studentNumber: number){
         console.log(studentNumber);
+    }
+
+    editStudents(){
 
     }
 

@@ -1,9 +1,15 @@
 <p>view-students works!</p>
 
-@for(student of students;track student.studentNo ){
+<ul>
+    @for(student of students;track student.studentNo ){
 
-    <h2>{{student.name}}</h2>
-    <h2>{{student.surname}}</h2>
-    <h2>{{student.studentNo}}</h2>
-    
-}
+        <li>{{ 'name : ' + student.name + 'surname: ' + student.surname + 'studentNo:' + student.studentNo}} </li>
+
+        
+    }
+
+</ul>
+
+
+
+
