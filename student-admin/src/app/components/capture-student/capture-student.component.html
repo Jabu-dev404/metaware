@@ -1,30 +1,20 @@
 <div id="box">
-     <p>{{degrees.length}}</p>
-
-<form >
+<form (ngSubmit)="onSubmit()">
     <p>
-        <input placeholder="Enter your name" type="text" name="name"  />
+        <label>Name</label>
+        <input  placeholder="Enter your name" type="text" name="name"  [(ngModel)]="enteredName"/>
     </p>
     <p>
-        <input placeholder="Enter your surname" type="text" name="surname"/>
+        <label>Surname</label>
+        <input placeholder="Enter your surname" type="text" name="surname" [(ngModel)]="enteredSurname"/>
     </p>
     <p>
-        <input placeholder="Enter your studentNo" type="number" name="studentNo"/>
+        <label>Year</label>
+        <input type="date" name="year" [(ngModel)]="enteredYears"/>
     </p>
     <p>
-        <input placeholder="Enter registractions" type="string" name="registractions"/>
-
-    </p>
-    <p>
-        <input placeholder="Enter years" type="number" name="years"/>
-    </p>
-    <p>
-  
-        <input placeholder="Enter degree" type="string" name="degree"/>
- 
-        <label>degree:</label>
-        
-        <select value="thabo">
+        <label >Degree</label>
+        <select value="thabo" name="degree" [(ngModel)]="enteredDegree">
              @for(degree of degrees; track degree.name){
      
                     <h1>{{degree.name}}</h1>
@@ -32,15 +22,7 @@
                 }
         </select>
     </p>
-    <p>
-        <input  type="boolean" placeholder="awarded " name="awarded"/>
-    </p>
-    <p>
-        <input placeholder="Enter module" type="boolean" name="modules-passed"/>
-    </p>
-    <p>
-        <input placeholder="Enter cost" type="number" name="cost"/>
-    </p>
-
+     
+    <button>Submit</button>
 </form>
 </div>

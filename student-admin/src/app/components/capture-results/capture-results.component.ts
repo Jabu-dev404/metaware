@@ -14,6 +14,7 @@ export class CaptureResultsComponent {
   
   
   enteredStudentNumber = '';
+  
 
 
 
@@ -22,8 +23,12 @@ export class CaptureResultsComponent {
   }
   onSumbit(){
 
-    this.dataService.captureResults(+this.enteredStudentNumber);
+    this.dataService.captureResults(this.enteredStudentNumber);
     
+    }
+
+   get results(){
+   return this.dataService.match
     }
 
   }
