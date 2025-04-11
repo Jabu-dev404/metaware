@@ -31,8 +31,8 @@ export class DataService {
         this.match1 = this.degrees.find((degree) => degree.name === studentNumber)!
         console.log(this.match1.name)
      }
-     get match(){
-        return this.match1;
+     get viewStudents() {
+        return this.students;
      }
      
 
