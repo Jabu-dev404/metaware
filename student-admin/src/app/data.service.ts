@@ -3,15 +3,17 @@ import { Degree } from "./models/degree.model";
 
 @Injectable({providedIn :'root'})
 export class DataService{
-  private  degrees = [
-    { 
-        name :" ",
-        noOfYears : 0,
-        modules :[''],
-        falcalty :'',
-        cost : 0
-    }
-  ]  
+//   private  degrees = [
+//     { 
+//         name :" ",
+//         noOfYears : 0,
+//         modules :[''],
+//         falcalty :'',
+//         cost : 0
+//     }
+//   ]  
+
+private degrees : Degree[] =[]
     option = [{
         id : "o1",
         name : 'Register'
