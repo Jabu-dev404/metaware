@@ -1,15 +1,22 @@
 <div id="box">
-<form >
+<form (ngSubmit)="onSubmit()">
     <p>
-        <input placeholder="Enter your name" type="text" name="name"  />
+        <label>Name</label>
+        <input  placeholder="Enter your name" type="text" name="name"  [(ngModel)]="enteredName"/>
     </p>
     <p>
-        <input placeholder="Enter your surname" type="text" name="surname"/>
+        <label>Surname</label>
+        <input placeholder="Enter your surname" type="text" name="surname" [(ngModel)]="enteredSurname"/>
     </p>
     <p>
-        <select value="thabo">
+        <label>Year</label>
+        <input type="date" name="year" [(ngModel)]="enteredYears"/>
+    </p>
+    <p>
+        <label >Degree</label>
+        <select value="thabo" name="degree" [(ngModel)]="enteredDegree">
              @for(degree of degrees; track degree.name){
-    
+     
                     <h1>{{degree.name}}</h1>
                     <option [value]="degree.name">{{degree.name}}</option>
                 }

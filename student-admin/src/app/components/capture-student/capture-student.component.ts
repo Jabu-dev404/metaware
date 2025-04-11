@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../data.service';
+import { Student } from '../../models/student.model';
 
 @Component({
   selector: 'app-capture-student',
@@ -10,15 +11,15 @@ import { DataService } from '../../data.service';
 })
 export class CaptureStudentComponent {
   private dataService = inject(DataService);
+  private awarded = false;
+  private studentNo = ++this.dataService.viewStudents.length + " ";
+
   enteredName = ' ';
   enteredSurname = ' ';
-  enteredStudentNo = ' ';
-  enteredRegistration = ' ';
   enteredYears = ' ';
-  enteredAwarded = ' ';
   enteredDegree = ' ';
-  enteredModulePassed = ' ';
-  enteredModulecost = ' ';
+  
+   
 
   
   
@@ -27,8 +28,19 @@ export class CaptureStudentComponent {
   }
   
   onSubmit() {
+    const degree = this.dataService.viewDegree.find((d) =>d.name === this.enteredDegree)!;
+      this.dataService.captureStudents({
+        studentNo:this.studentNo,
+        name:this.enteredName,
+        surname:this.enteredSurname,registration:{
+          year:this.enteredYears,
+          degree:degree,
+          awarded:this.awarded,
+          modulepassed:degree.modules,
+          cost:degree.cost
+        }
+      })
     
-     
   }
  
 }
