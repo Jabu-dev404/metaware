@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Degree } from "./models/degree.model";
+import { Student} from "./models/student.model";
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
@@ -11,6 +12,7 @@ export class DataService {
     cost :0
     };
     private degrees: Degree[] = []
+    private students: Student[] = []
     option = [{
         id: "o1",
         name: 'Register'
