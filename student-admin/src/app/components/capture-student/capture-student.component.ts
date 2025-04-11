@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-capture-student',
@@ -8,7 +9,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './capture-student.component.css'
 })
 export class CaptureStudentComponent {
-  
-  
+   
+  constructor(private dataService:DataService) {
 
+  }
+  
+  // degrees = this.dataServices.viewDegree
+
+  get degrees() {
+    return this.dataService.viewDegree
+  }
 }
