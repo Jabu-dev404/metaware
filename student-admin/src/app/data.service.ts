@@ -34,6 +34,9 @@ export class DataService {
      get viewStudents() {
         return this.students;
      }
+     get match(){
+        return this.match1
+     }
      
 
 

@@ -29,6 +29,28 @@
        <p> <label for="surname">{{results.noOfYears}}</label></p>
         <p><label for="studentnumber">{{results.cost}}</label></p>
 
+        @for(module of results.modules ; track module){
+            
+           <p>
+                {{module}} <select name="">
+                    <option value="" data-display="">
+                        
+                    </option>
+                    <option>
+                        pass
+
+                    </option>
+                    <option>
+                        fail
+                    </option>
+                </select>
+            </p>
+        
+        }
+
+
+        <button>Save</button>
+
 
     </form>
     
