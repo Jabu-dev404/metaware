@@ -1,6 +1,4 @@
 <div id="box">
-     <p>{{degrees.length}}</p>
-
 <form >
     <p>
         <input placeholder="Enter your name" type="text" name="name"  />
@@ -9,21 +7,6 @@
         <input placeholder="Enter your surname" type="text" name="surname"/>
     </p>
     <p>
-        <input placeholder="Enter your studentNo" type="number" name="studentNo"/>
-    </p>
-    <p>
-        <input placeholder="Enter registractions" type="string" name="registractions"/>
-
-    </p>
-    <p>
-        <input placeholder="Enter years" type="number" name="years"/>
-    </p>
-    <p>
-  
-        <input placeholder="Enter degree" type="string" name="degree"/>
- 
-        <label>degree:</label>
-        
         <select value="thabo">
              @for(degree of degrees; track degree.name){
     
@@ -32,15 +15,7 @@
                 }
         </select>
     </p>
-    <p>
-        <input  type="boolean" placeholder="awarded " name="awarded"/>
-    </p>
-    <p>
-        <input placeholder="Enter module" type="boolean" name="modules-passed"/>
-    </p>
-    <p>
-        <input placeholder="Enter cost" type="number" name="cost"/>
-    </p>
-
+     
+    <button>Submit</button>
 </form>
 </div>

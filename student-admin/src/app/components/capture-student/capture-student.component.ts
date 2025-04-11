@@ -9,20 +9,26 @@ import { DataService } from '../../data.service';
   styleUrl: './capture-student.component.css'
 })
 export class CaptureStudentComponent {
- 
   private dataService = inject(DataService);
-  
-  // get degrees() {
-  //   return this.dataService.
-  // }
- 
-   
-   
-  
-  // degrees = this.dataServices.viewDegree
+  enteredName = ' ';
+  enteredSurname = ' ';
+  enteredStudentNo = ' ';
+  enteredRegistration = ' ';
+  enteredYears = ' ';
+  enteredAwarded = ' ';
+  enteredDegree = ' ';
+  enteredModulePassed = ' ';
+  enteredModulecost = ' ';
 
+  
+  
   get degrees() {
     return this.dataService.viewDegree
+  }
+  
+  onSubmit() {
+    
+     
   }
  
 }
