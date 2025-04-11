@@ -1,6 +1,5 @@
 <div id="box">
-    <p>register works</p>
-   
+     <p>{{degrees.length}}</p>
 
 <form >
     <p>
@@ -20,7 +19,18 @@
         <input placeholder="Enter years" type="number" name="years"/>
     </p>
     <p>
+  
         <input placeholder="Enter degree" type="string" name="degree"/>
+ 
+        <label>degree:</label>
+        
+        <select value="thabo">
+             @for(degree of degrees; track degree.name){
+    
+                    <h1>{{degree.name}}</h1>
+                    <option [value]="degree.name">{{degree.name}}</option>
+                }
+        </select>
     </p>
     <p>
         <input  type="boolean" placeholder="awarded " name="awarded"/>
