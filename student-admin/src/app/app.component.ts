@@ -10,7 +10,7 @@ import { CaptureStudentComponent } from "./components/capture-student/capture-st
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [HeaderComponent, OptionComponent, CaptureDegreeComponent, CaptureResultsComponent, CaptureStudentComponent],
+  imports: [RouterOutlet,HeaderComponent, OptionComponent, CaptureDegreeComponent, CaptureResultsComponent, CaptureStudentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
