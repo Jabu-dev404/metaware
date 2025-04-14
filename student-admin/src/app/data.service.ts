@@ -36,13 +36,6 @@ export class DataService {
      }
      
 
-    
-
-    editStudents(){
-    }
-
-    
-
     captureStudents(student:Student) {
          
         this.students.push(student);
