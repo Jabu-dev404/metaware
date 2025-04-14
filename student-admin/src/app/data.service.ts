@@ -54,7 +54,7 @@ export class DataService {
         return this.students;
      }
      get match(){
-        return this.match1
+        return this.match2
      }
      
 
