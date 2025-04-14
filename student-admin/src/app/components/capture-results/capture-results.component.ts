@@ -28,7 +28,7 @@ export class CaptureResultsComponent {
     }
 
    get results(){
-   return this.dataService.match
+   return this.dataService.match1
     }
 
   }
