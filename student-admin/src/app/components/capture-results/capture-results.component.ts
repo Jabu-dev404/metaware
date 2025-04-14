@@ -9,8 +9,6 @@ import { DataService } from '../../data.service';
   styleUrl: './capture-results.component.css'
 })
 export class CaptureResultsComponent {
-
-
   
   
   enteredStudentNumber = '';
