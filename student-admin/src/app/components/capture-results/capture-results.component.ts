@@ -29,6 +29,10 @@ export class CaptureResultsComponent {
    return this.dataService.match1
     }
 
+    save(){
+      
+    }
+
   }
 
 
