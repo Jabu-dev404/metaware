@@ -6,11 +6,12 @@ import { CaptureStudentComponent } from './components/capture-student/capture-st
 import { ViewStudentsComponent } from './view-student/view-students.component';
 import { EditDegreeComponent } from './edit-degree/edit-degree.component';
 import { EditStudentsComponent } from './edit-students/edit-students.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [CaptureDegreeComponent, HeaderComponent, OptionComponent,CaptureStudentComponent,ViewStudentsComponent,EditStudentsComponent],
+  imports: [RouterOutlet,CaptureDegreeComponent, HeaderComponent, OptionComponent,CaptureStudentComponent,ViewStudentsComponent,EditStudentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
