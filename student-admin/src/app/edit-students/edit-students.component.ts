@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../data.service';
+import { Student } from '../models/student.model';
 
 @Component({
   selector: 'app-edit-students',
@@ -8,21 +9,41 @@ import { DataService } from '../data.service';
   templateUrl: './edit-students.component.html',
   styleUrl: './edit-students.component.css'
 })
-export class EditStudentsComponent {
+export class EditStudentsComponent implements OnInit {
   enteredName = '';
   enteredSurname ='';
-  enteredDegree = '';
-  enteredYear = ''; 
+  enteredNo ='';
+  enteredRegistraction = '';
+  // enteredDegree = '';
+  // enteredYear = '';
+  
 
   constructor(private dataService :DataService){
-    // this.dataService.updateStudent
+    
+   
+  }
+  
+  ngOnInit(): void {
+   
+   
   }
 
-
+  
   saveStudent(){
-    console.log('clicked');
-    
-    
+  console.log(this.dataService.updateStudent.name)
+
+
+    // this.dataService.updateStudent({
+    //   name : this.enteredName,
+    //   surname: this.enteredSurname,
+    //   studentNo :this.enteredNo,
+    //   registration:{year,degree,awarded,modulepassed,cost}
+
+    // });
+     
+  
+  
+
   }
 
 }

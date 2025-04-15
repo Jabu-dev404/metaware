@@ -1,17 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th>studentName</th>
+            <th> studentSurname</th>
+            <th> registractionDate</th>
+            <th> Degree-name</th>
+        </tr>
+    </thead>
+<tbody>
 
-
-
-<ul>
     @for(student of students;track student.studentNo ){
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.surname}}</td>
+            <td>{{student.registration.year}}</td>
+            <td>{{student.registration.degree.name}}</td>
+        </tr>
 
-        <li>{{ 'name : ' + student.name + "  " +'surname :' + student.surname + "  " + 'registrations :' + student.registration.year + "   " + 'Degree :' + student.registration.degree.name}}</li>
-        
-       
 
-        
-    }
+}
+<!-- <li>{{ 'Name : ' + student.name + "  " +'Surname :' + student.surname + "  " + 'Registrations :' + student.registration.year + "   " + 'Degree :' + student.registration.degree.name}}</li>  -->
 
-</ul>
+
+<tbody>
+</table>
+
 
 
 

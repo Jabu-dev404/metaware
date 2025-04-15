@@ -54,12 +54,13 @@ export class DataService {
      get viewStudents() { 
         return this.students;
      }
-     getStudent(){
-        return this.students
-     }
+    // editStudent(student:Student){
+        
+    //  }
 
-    updateStudent(id :string ,student :Student){
-
+    updateStudent(student:Student){
+        this.students.push(student)
+       
       }
 
 
