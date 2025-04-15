@@ -6,7 +6,7 @@
     </p>
     <p>
         <label>Surname</label>
-        <input placeholder="Enter your surname" type="text" name="surname" required [(ngModel)]="enteredSurname"/>
+        <input placeholder="Enter your surname" type="text" name="surname" [(ngModel)]="enteredSurname"/>
     </p>
     <p>
         <label>Year</label>
@@ -15,14 +15,19 @@
     <p>
         <label >Degree</label>
         <select value="thabo" name="degree" [(ngModel)]="enteredDegree">
+        <label id="degree" >Degree</label>
+        <select id="degree-input" value="Degrees" name="degree" [(ngModel)]="enteredDegree">
              @for(degree of degrees; track degree.name){
      
                     <h1>{{degree.name}}</h1>
                     <option [value]="degree.name">{{degree.name}}</option>
                 }
-        </select>
+            </select>
     </p>
-     
-    <button>Submit</button>
+    <p>
+        
+        <input id="year-input" type="date" name="year" [(ngModel)]="enteredYears"/>
+    </p>
+    <button id="btn">Submit</button>
 </form>
 </div>

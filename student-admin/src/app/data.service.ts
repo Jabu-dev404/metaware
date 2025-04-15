@@ -7,12 +7,31 @@ import { Router } from "@angular/router";
 export class DataService {
     router = inject(Router)
     match1 ={
-        name :'',
+    name :'',
     noOfYears : 0,
     modules :[''],
     falcalty :'',
     cost :0
     };
+
+    
+    match2 = {
+        studentNo :'',
+        name :'',
+        surname:'',
+        registration: {year : '',
+        degree : { name :'',
+        noOfYears : 0,
+        modules : [''],
+        falcalty :'',
+        cost :0},
+
+       awarded : false,
+       modulepassed:[''],
+       cost : 0,
+    }
+        };
+    
     private degrees: Degree[] = []
     private students: Student[] = []
     option = [{
@@ -40,11 +59,14 @@ export class DataService {
 
  
     captureResults(studentNumber: string){   
-        this.match1 = this.degrees.find((degree) => degree.name === studentNumber)!
-        console.log(this.match1.name)
+        this.match2 = this.students.find((student) => student.studentNo === studentNumber)!
+        console.log(this.match2.name)
      }
      get viewStudents() {
         return this.students;
+     }
+     get match(){
+        return this.match2
      }
      
 
