@@ -20,15 +20,15 @@ export const routes: Routes = [
         component:ViewStudentsComponent,
     },
     {
-        path:'03',
+        path:'04',
         component:ViewResultsComponent,
     },
     {
-        path:'04',
+        path:'05',
         component:CaptureDegreeComponent,
     },
     {
-        path:'05',
+        path:'03',
         component:CaptureResultsComponent,
     },
 

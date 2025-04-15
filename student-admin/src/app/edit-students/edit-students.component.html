@@ -1,0 +1,38 @@
+
+<div id="btn">
+<h1>Edit student</h1>
+<form (ngSubmit)="saveStudent()">
+    <div>
+        
+        <label>Name:</label>
+        <input type="text" name="Name" [(ngModel)]="enteredName"/>
+    </div>
+
+    <div>
+        <label>surname :</label>
+        <input type="text" name="surname" [(ngModel)]=" enteredSurname"/>
+    </div>
+    <!-- <div>
+        <label>Degree :</label>
+        <input type="text" name="degree" [(ngModel)]=" enteredDegree" />
+    </div> -->
+    <div>
+        <!-- <label>Year :</label>
+        <input type="text" name="year" [(ngModel)]=" enteredYear" /> -->
+        <label>registraction:</label>
+        <input type="text" name="registraction"  [(ngModel)]="enteredRegistraction"  />
+
+    </div  >
+    <div id="btn2">
+        <button type="submit">save</button>
+
+        <div>
+            <button type="reset">edit</button>
+        </div>
+
+    </div> 
+</form>
+</div>
+
+
+

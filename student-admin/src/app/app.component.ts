@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { CaptureDegreeComponent } from "./capture-degree/capture-degree.component";
 import { HeaderComponent } from './components/header/header.component';
 import { OptionComponent } from "./components/option/option.component";
 import { RouterOutlet } from '@angular/router';
