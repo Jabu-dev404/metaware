@@ -4,6 +4,7 @@ import { DataService } from '../../data.service';
 import { Student } from '../../models/student.model';
 import { Degree } from '../../models/degree.model';
 
+
 @Component({
   selector: 'app-capture-student',
   imports:[FormsModule],
@@ -13,12 +14,8 @@ import { Degree } from '../../models/degree.model';
 export class CaptureStudentComponent {
   private dataService = inject(DataService);
   private awarded = false;
-<<<<<<< HEAD
   private studentNo = this.dataService.viewStudents.length + " ";
-=======
-  private studentNo = ++this.dataService.viewStudents.length + " ";
-  selectedDegree!:Degree;
->>>>>>> 3ba9fde8d973193c927c3534c24dea7d0d0b68b5
+  selectedDegree!:Degree
 
   enteredName = ' ';
   enteredSurname = ' ';
