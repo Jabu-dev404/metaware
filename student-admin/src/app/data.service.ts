@@ -33,10 +33,28 @@ export class DataService {
     private degrees: Degree[] = []
     private students: Student[] = []
     option = [{
-        id: "o1",
-        name: 'Register'
+        optionId: "01",
+        name: 'Capture Student'
 
-    }]
+    },
+    {
+        optionId: "02",
+        name: 'View Students'
+    },
+    {
+        optionId: "03",
+        name: 'Capture results'
+    },
+    {
+        optionId: "04",
+        name: 'View Results'
+        
+    },
+    {
+        optionId: "05",
+        name: 'Capture degree'
+    }
+    ]
     captureDegree(degree: Degree) {
         this.degrees.push(degree)
     }
