@@ -9,8 +9,6 @@ import { DataService } from '../../data.service';
   styleUrl: './capture-results.component.css'
 })
 export class CaptureResultsComponent {
-
-
   
   
   enteredStudentNumber = '';
@@ -28,7 +26,7 @@ export class CaptureResultsComponent {
     }
 
    get results(){
-   return this.dataService.match
+   return this.dataService.match1
     }
 
     save(){
