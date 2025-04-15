@@ -6,8 +6,9 @@
     </p>
     <p>
         <label>Surname</label>
-        <input placeholder="Enter your surname" type="text" name="surname" [(ngModel)]="enteredSurname"/>
+        <input placeholder="Enter your surname" type="text" name="surname" required [(ngModel)]="enteredSurname"/>
     </p>
+   
     <p>
         <label>Year</label>
         <input type="date" name="year" required [(ngModel)]="enteredYears"/>
@@ -23,11 +24,9 @@
                     <option [value]="degree.name">{{degree.name}}</option>
                 }
             </select>
-    </p>
-    <p>
+    
         
         <input id="year-input" type="date" name="year" [(ngModel)]="enteredYears"/>
-    </p>
+    
     <button id="btn">Submit</button>
-</form>
-</div>
+
