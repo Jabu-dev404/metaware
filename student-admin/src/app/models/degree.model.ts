@@ -4,6 +4,7 @@ export interface Degree{
     modules :string[]
     falcalty :string
     cost :number
+    edit? : boolean
 
 }
 

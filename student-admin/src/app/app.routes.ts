@@ -6,37 +6,51 @@ import { CaptureStudentComponent } from './components/capture-student/capture-st
 import { CaptureResultsComponent } from './components/capture-results/capture-results.component';
 import { ViewDegreeComponent } from './view-degree/view-degree.component';
 import { EditDegreeComponent } from './edit-degree/edit-degree.component';
+import { DegreeControlComponent } from './degree-control/degree-control.component';
+import { DegreeDetailsComponent } from './degree-details/degree-details.component';
 
 export const routes: Routes = [
     {
-        path:'degree',
-        component:CaptureDegreeComponent,
+        path: 'degree',
+        component: CaptureDegreeComponent,
     },
     {
-        path:'viewResults',
-        component:ViewResultsComponent,
+        path: 'viewResults',
+        component: ViewResultsComponent,
     },
     {
-    path:'capturestudent',
-    component:CaptureStudentComponent,
+        path: 'capturestudent',
+        component: CaptureStudentComponent,
     },
     {
-        path:'captureresults',
-        component:CaptureResultsComponent,
+        path: 'captureresults',
+        component: CaptureResultsComponent,
     },
 
     {
-        path:'',
-        component:ViewDegreeComponent
-    },
-    {
-        path : 'editDegree',
-        component : EditDegreeComponent
+        path: 'viewDegree',
+        component: ViewDegreeComponent,
+        children: [
+
+           
+            {
+                path : ':degreeName/degreeDetails',
+                component : DegreeDetailsComponent,
+                children : [
+                    {
+                        path: 'editDegree',
+                        component: DegreeControlComponent
+                    },
+                ]
+            }
+
+
+        ]
     }
 
-    
-        
-        
-    
-   
+
+
+
+
+
 ];

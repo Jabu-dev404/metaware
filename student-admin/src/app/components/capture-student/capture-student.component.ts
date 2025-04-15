@@ -5,6 +5,7 @@ import { Student } from '../../models/student.model';
 
 @Component({
   selector: 'app-capture-student',
+  standalone : true,
   imports:[FormsModule],
   templateUrl: './capture-student.component.html',
   styleUrl: './capture-student.component.css'
@@ -12,7 +13,7 @@ import { Student } from '../../models/student.model';
 export class CaptureStudentComponent {
   private dataService = inject(DataService);
   private awarded = false;
-  private studentNo = ++this.dataService.viewStudents.length + " ";
+  private studentNo = this.dataService.viewStudents.length + " ";
 
   enteredName = ' ';
   enteredSurname = ' ';

@@ -1,9 +1,11 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { Degree } from "./models/degree.model";
 import { Student} from "./models/student.model";
+import { Router } from "@angular/router";
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
+    router = inject(Router)
     match1 ={
         name :'',
     noOfYears : 0,
@@ -18,7 +20,17 @@ export class DataService {
         name: 'Register'
 
     }]
+
+    degree = {
+        name :'',
+        noOfYears : 0,
+        modules :[''],
+        falcalty :'',
+        cost : 0,
+        edit : false
+    }
     captureDegree(degree: Degree) {
+        degree.edit = false
         this.degrees.push(degree)
     }
 
@@ -42,6 +54,26 @@ export class DataService {
     captureStudents(student:Student) {
          
         this.students.push(student);
+        console.log(this.students[0].name)
+    }
+
+    edit(name : string){
+        console.log(name + "im service");
+        this.degrees.find((d)=> d.name === name)!.edit = true;
+        this.router.navigate(['viewDegree', this.degrees.find((d)=> d.name === name)!.name,'degreeDetails'])
+
+    //    console.log(this.degrees.findIndex((d)=> d.name === name)!  + " found")
+    }
+    editDegre(degree:Degree,degreeNewName : Degree){
+        this.degrees.find((d)=> d.name === degree.name)!.edit = false
+        this.degrees.find((d)=> d.name === degree.name)!.name =degreeNewName.name
+        this.degrees.find((d)=> d.name === degree.name)!.noOfYears = degreeNewName.noOfYears
+        this.degrees.find((d)=> d.name === degree.name)!.falcalty = degreeNewName.falcalty
+        this.degrees.find((d)=> d.name === degree.name)!.modules = degreeNewName.modules
+        this.degrees.find((d)=> d.name === degree.name)!.cost = degreeNewName.cost
+        this.router.navigate(['viewDegree', degreeNewName.name,'degreeDetails'])
+
+
     }
 
     

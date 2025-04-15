@@ -2,15 +2,15 @@
 <form (ngSubmit)="onSubmit()">
     <p>
         <label>Name</label>
-        <input  placeholder="Enter your name" type="text" name="name"  [(ngModel)]="enteredName"/>
+        <input  placeholder="Enter your name" type="text" name="name" required [(ngModel)]="enteredName"/>
     </p>
     <p>
         <label>Surname</label>
-        <input placeholder="Enter your surname" type="text" name="surname" [(ngModel)]="enteredSurname"/>
+        <input placeholder="Enter your surname" type="text" name="surname" required [(ngModel)]="enteredSurname"/>
     </p>
     <p>
         <label>Year</label>
-        <input type="date" name="year" [(ngModel)]="enteredYears"/>
+        <input type="date" name="year" required [(ngModel)]="enteredYears"/>
     </p>
     <p>
         <label >Degree</label>
