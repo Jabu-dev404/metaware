@@ -1,9 +1,31 @@
-<p>view-students works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>studentName</th>
+            <th> studentSurname</th>
+            <th> registractionDate</th>
+            <th> Degree-name</th>
+        </tr>
+    </thead>
+<tbody>
 
-@for(student of students;track student.studentNo ){
+    @for(student of students;track student.studentNo ){
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.surname}}</td>
+            <td>{{student.registration.year}}</td>
+            <td>{{student.registration.degree.name}}</td>
+        </tr>
 
-    <h2>{{student.name}}</h2>
-    <h2>{{student.surname}}</h2>
-    <h2>{{student.studentNo}}</h2>
-    
+
 }
+<!-- <li>{{ 'Name : ' + student.name + "  " +'Surname :' + student.surname + "  " + 'Registrations :' + student.registration.year + "   " + 'Degree :' + student.registration.degree.name}}</li>  -->
+
+
+<tbody>
+</table>
+
+
+
+
+

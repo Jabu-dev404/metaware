@@ -84,7 +84,6 @@ export class DataService {
 
     captureStudents(student:Student) {
         this.students.push(student);
-<<<<<<< HEAD
         console.log(this.students[0].name)
     }
 
@@ -105,9 +104,6 @@ export class DataService {
         this.router.navigate(['viewDegree', degreeNewName.name,'degreeDetails'])
 
 
-=======
-      
->>>>>>> e4bc6659b7a50cd73a75a00a313b6c0606bd7c64
     }
 
     
