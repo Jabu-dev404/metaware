@@ -62,20 +62,29 @@ export class DataService {
         this.match2 = this.students.find((student) => student.studentNo === studentNumber)!
         console.log(this.match2.name)
      }
-     get viewStudents() {
+
+     get viewStudents() { 
         return this.students;
      }
+    // editStudent(student:Student){
+        
+    //  }
+
+    updateStudent(student:Student){
+        this.students.push(student)
+       
+      }
+
+
+
      get match(){
         return this.match2
      }
      
 
-
-    
-
     captureStudents(student:Student) {
-         
         this.students.push(student);
+<<<<<<< HEAD
         console.log(this.students[0].name)
     }
 
@@ -96,9 +105,13 @@ export class DataService {
         this.router.navigate(['viewDegree', degreeNewName.name,'degreeDetails'])
 
 
+=======
+      
+>>>>>>> e4bc6659b7a50cd73a75a00a313b6c0606bd7c64
     }
 
     
 
 }
+
 
