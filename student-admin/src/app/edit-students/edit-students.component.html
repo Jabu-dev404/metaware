@@ -1,1 +1,33 @@
-<p>edit-students works!</p>
+
+<div id="btn">
+<h1>Edit student</h1>
+<form (ngSubmit)="saveStudent()">
+    <div>
+        
+        <label>Name:</label>
+        <input type="text" name="Name" [(ngModel)]="enteredName"/>
+    </div>
+
+    <div>
+        <label>surname :</label>
+        <input type="text" name="surname" [(ngModel)]=" enteredSurname"/>
+    </div>
+    <div>
+        <label>Degree :</label>
+        <input type="text" name="degree" [(ngModel)]=" enteredDegree" />
+    </div>
+    <div>
+        <label>Year :</label>
+        <input type="text" name="year" [(ngModel)]=" enteredYear" />
+
+    </div  >
+    <div id="btn2">
+        <button type="submit">save</button>
+
+    </div>
+   
+        
+     
+</form>
+</div>
+

@@ -50,17 +50,28 @@ export class DataService {
         this.match2 = this.students.find((student) => student.studentNo === studentNumber)!
         console.log(this.match2.name)
      }
-     get viewStudents() {
+
+     get viewStudents() { 
         return this.students;
      }
+     getStudent(){
+        return this.students
+     }
+
+    updateStudent(id :string ,student :Student){
+
+      }
+
+
+
      get match(){
         return this.match1
      }
      
 
     captureStudents(student:Student) {
-         
         this.students.push(student);
+      
     }
 
     

@@ -11,10 +11,11 @@ import { DataService } from '../data.service';
 export class ViewStudentsComponent {
   // students =["Thabo","Tehilla","peggy","Jabu"]
   constructor(private dataService:DataService){
-
+    
   }
-
+  
   get students(){
+   
     return this.dataService.viewStudents
   }
 

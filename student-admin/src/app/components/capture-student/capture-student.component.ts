@@ -12,7 +12,7 @@ import { Student } from '../../models/student.model';
 export class CaptureStudentComponent {
   private dataService = inject(DataService);
   private awarded = false;
-  private studentNo = ++this.dataService.viewStudents.length + " ";
+  private studentNo = this.dataService.viewStudents.length + " ";
 
   enteredName = ' ';
   enteredSurname = ' ';
