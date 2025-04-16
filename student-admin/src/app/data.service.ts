@@ -18,7 +18,7 @@ export class DataService {
     match2 = {
         studentNo :'',
         name :'',
-        surname:'',
+        surname:'',  
         registration: {year : '',
         degree : { name :'',
         noOfYears : 0,
@@ -35,29 +35,10 @@ export class DataService {
     private degrees: Degree[] = []
     private students: Student[] = []
     option = [{
-        optionId: "01",
-        name: 'Capture Student'
+        id: "o1",
+        name: 'Register'
 
-    },
-    {
-        optionId: "02",
-        name: 'View Students'
-    },
-    {
-        optionId: "03",
-        name: 'Capture results'
-    },
-    {
-        optionId: "04",
-        name: 'View Results'
-        
-    },
-    {
-        optionId: "05",
-        name: 'Capture degree'
-    }
-    ]
-    
+    }]
 
     degree = {
         name :'',
