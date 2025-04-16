@@ -38,7 +38,6 @@ export class DataService {
         optionId: "01",
         name: 'Capture Student'
 
-<<<<<<< HEAD
     },
     {
         optionId: "02",
@@ -58,8 +57,7 @@ export class DataService {
         name: 'Capture degree'
     }
     ]
-=======
-    }]
+    
 
     degree = {
         name :'',
@@ -69,7 +67,6 @@ export class DataService {
         cost : 0,
         edit : false
     }
->>>>>>> 577e12fbef2163432f2fd92011ac666da3535022
     captureDegree(degree: Degree) {
         degree.edit = false
         this.degrees.push(degree)
