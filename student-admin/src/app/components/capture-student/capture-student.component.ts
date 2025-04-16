@@ -15,14 +15,10 @@ export class CaptureStudentComponent {
   
   private dataService = inject(DataService);
   private awarded = false;
-<<<<<<< HEAD
-  private studentNo = this.dataService.viewStudents.length + " ";
-=======
  
   private studentNo = this.dataService.viewStudents.length + " ";
   selectedDegree!:Degree
  
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 
   enteredName = ' ';
   enteredSurname = ' ';

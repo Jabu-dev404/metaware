@@ -1,8 +1,4 @@
 import { Component, signal } from '@angular/core';
-<<<<<<< HEAD
-=======
-
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 import { DataService } from '../data.service';
 import { inject } from '@angular/core/testing';
 import { RouterLink, RouterOutlet } from '@angular/router';

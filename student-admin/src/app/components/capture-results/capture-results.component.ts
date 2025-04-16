@@ -42,7 +42,6 @@ export class CaptureResultsComponent {
   
 
    get results(){
-<<<<<<< HEAD
     
    return this.dataService.match
     }
@@ -75,10 +74,6 @@ export class CaptureResultsComponent {
 
     
     
-=======
-   return this.dataService.match1
-    }
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 
   }
 

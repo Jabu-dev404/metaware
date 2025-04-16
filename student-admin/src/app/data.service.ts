@@ -1,8 +1,8 @@
 import { inject, Injectable } from "@angular/core";
 import { Degree } from "./models/degree.model";
-<<<<<<< HEAD
 import { Student } from "./models/student.model";
 import { ViewResults} from "./models/student.model";
+import { Router} from "@angular/router";
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
@@ -19,33 +19,6 @@ export class DataService {
     surname: '',
     studentNo: '',
     modules: [''],
-=======
-import { Student} from "./models/student.model";
-import { Router } from "@angular/router";
-
-@Injectable({ providedIn: 'root' })
-export class DataService {
-    router = inject(Router)
-    match1 ={
-    name :'',
-    noOfYears : 0,
-    modules :[''],
-    falcalty :'',
-    cost :0
-    };
-
-    
-    match2 = {
-        studentNo :'',
-        name :'',
-        surname:'',  
-        registration: {year : '',
-        degree : { name :'',
-        noOfYears : 0,
-        modules : [''],
-        falcalty :'',
-        cost :0},
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 
     }
 
@@ -73,12 +46,7 @@ export class DataService {
     private degrees: Degree[] = []
     private results: ViewResults[] =[]
     private students: Student[] = []
-<<<<<<< HEAD
-
-    option = [{
-        id: "o1",
-        name: 'Register'
-=======
+    private router = inject(Router);
     option = [
         {
             optionId: "01",
@@ -88,7 +56,6 @@ export class DataService {
                 optionId: "02",
                 name: 'view students'
                 },
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 
                 {
                     optionId: "03",
@@ -128,19 +95,17 @@ export class DataService {
         return this.degrees
     }
 
-<<<<<<< HEAD
 
     
-    get viewStudents() {
-        return this.students;
-    }
+    // get viewStudents() {
+    //     return this.students;
+    // }
     get match() {
         return this.match2
-=======
  
-    captureResults(studentNumber: string){   
-        this.match2 = this.students.find((student) => student.studentNo === studentNumber)!
-        console.log(this.match2.name)
+    // captureResults(studentNumber: string){   
+    //     this.match2 = this.students.find((student) => student.studentNo === studentNumber)!
+    //     console.log(this.match2.name)
      }
 
      get viewStudents() { 
@@ -157,15 +122,15 @@ export class DataService {
 
 
 
-     get match(){
-        return this.match2
-     }
+    //  get match(){
+    //     return this.match2
+    //  }
      
 
-    captureStudents(student:Student) {
-        this.students.push(student);
-        console.log(this.students[0].name)
-    }
+    // captureStudents(student:Student) {
+    //     this.students.push(student);
+    //     console.log(this.students[0].name)
+    // }
 
     edit(name : string){
         console.log(name + "im service");
@@ -184,7 +149,6 @@ export class DataService {
         this.router.navigate(['06', degreeNewName.name,'degreeDetails'])
 
 
->>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
     }
 
 

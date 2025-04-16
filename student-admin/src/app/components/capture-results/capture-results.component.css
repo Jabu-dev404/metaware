@@ -1,0 +1,27 @@
+#form1{
+    height: 200px;
+    width: 250px;
+    border: solid #0C0950;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 60px;
+    background-color:#D4C9BE;
+
+}
+button{
+    margin-left: 75px;
+    cursor: pointer;
+}
+#form3{
+    height: 300px;
+    width: 250px;
+    border: solid #0C0950;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 60px;
+    background-color:#D4C9BE;
+
+}
+
+
+

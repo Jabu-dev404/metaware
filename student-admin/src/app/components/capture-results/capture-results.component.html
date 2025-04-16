@@ -1,7 +1,7 @@
 
 
 
-<div id="form">
+<div id="form1">
 
     <form (ngSubmit)="onSumbit()" >
         <h1>Search A Student</h1>
@@ -22,10 +22,10 @@
 
 
 
-    </form>
+    </form >
 </div>
 @if(results.studentNo){
-<div>
+<div id="form2">
     <form id="forms" >
         <h1>Student Information</h1>
        <p> <label for="name">Name:{{results.name}}</label></p>
@@ -48,12 +48,10 @@
 
 
 } 
-@else {
-    <p>Student not found</p>
-} 
+ 
 
 
-<div>
+<div id="form3">
    <form (ngSubmit)="save()">
     <h1>Capture Results</h1>
 <p>
