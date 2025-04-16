@@ -3,14 +3,13 @@ import { Component, signal } from '@angular/core';
 import { DataService } from '../data.service';
 import { inject } from '@angular/core/testing';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { EditDegreeComponent } from "../edit-degree/edit-degree.component";
 import { Degree } from '../models/degree.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-view-degree',
   standalone : true,
-  imports: [RouterLink,RouterOutlet, EditDegreeComponent,FormsModule],
+  imports: [RouterLink,RouterOutlet,FormsModule],
   templateUrl: './view-degree.component.html',
   styleUrl: './view-degree.component.css'
 })

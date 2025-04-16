@@ -4,7 +4,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { OptionComponent } from "./components/option/option.component";
 import { CaptureStudentComponent } from './components/capture-student/capture-student.component';
 import { ViewStudentsComponent } from './view-student/view-students.component';
-import { EditDegreeComponent } from './edit-degree/edit-degree.component';
 import { EditStudentsComponent } from './edit-students/edit-students.component';
 import { RouterOutlet } from '@angular/router';
 

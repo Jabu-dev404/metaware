@@ -28,13 +28,10 @@ export class CaptureResultsComponent {
 
    get results(){
    return this.dataService.match1
-<<<<<<< HEAD
-=======
     }
 
     save(){
       
->>>>>>> 3ba9fde8d973193c927c3534c24dea7d0d0b68b5
     }
 
   }
