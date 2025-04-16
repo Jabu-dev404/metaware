@@ -4,13 +4,12 @@ import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-capture-results',
+  standalone : true,
   imports: [FormsModule],
   templateUrl: './capture-results.component.html',
   styleUrl: './capture-results.component.css'
 })
 export class CaptureResultsComponent {
-
-
   
   
   enteredStudentNumber = '';
@@ -43,6 +42,7 @@ export class CaptureResultsComponent {
   
 
    get results(){
+<<<<<<< HEAD
     
    return this.dataService.match
     }
@@ -75,6 +75,10 @@ export class CaptureResultsComponent {
 
     
     
+=======
+   return this.dataService.match1
+    }
+>>>>>>> e79eaf87f8ab3403de83a346be3c1eedf7a04c8c
 
   }
 

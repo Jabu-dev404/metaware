@@ -1,10 +1,11 @@
 #box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    width: 300px;
-    border: solid #102E50;
+    height: 300px;
+    width: 250px;
+    border: solid #0C0950;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 60px;
+    background-color:#D4C9BE;
 }
 
 select {
@@ -12,4 +13,40 @@ select {
 }
 ::placeholder {
      text-align: center;
+}
+
+#name {
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+#name-input {
+    margin-left: 40px;
+}
+
+#surname {
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+#surname-input {
+    margin-left: 40px;
+}
+
+#year-input {
+    margin-left: 40px;
+}
+
+#degree {
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+#degree-input {
+    margin-left: 40px;
+}
+
+#btn {
+    margin-left: 70px;
+    margin-top: 20px;
 }

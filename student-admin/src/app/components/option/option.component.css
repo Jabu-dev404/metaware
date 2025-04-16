@@ -2,10 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #161179;
+    /* background-color: #0C0950; */
+    border:solid #0C0950;
+     margin-top: 15px;
     color: white;
     height: 50px;
     border-radius: 30px;
     font-size: larger;
     font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.options:hover {
+    background-color: #0C0950;
+    color: white;
 }

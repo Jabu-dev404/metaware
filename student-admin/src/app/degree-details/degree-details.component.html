@@ -1,0 +1,43 @@
+@if(degree.edit === false){
+<p>
+    
+  <!-- <button [routerLink]="[degree.name,'editDegree']"  >degree name: {{ degree.name }}</button> -->
+  <button  [routerLink]="['editDegree']">degree name: {{ degree.name }}</button>
+</p>
+@for(module of degree.modules; track module ){
+<p>
+  <button [routerLink]="['editDegree']">module name : <span>{{ module }}</span></button>
+</p>
+
+}
+<p>
+  <button [routerLink]="['editDegree']">number of years : {{ degree.noOfYears }}</button>
+</p>
+<p>
+  <button [routerLink]="['editDegree']">faculty : {{ degree.falcalty }}</button>
+</p>
+<p>
+  <button [routerLink]="['editDegree']"> cost : {{ degree.cost }}</button>
+</p>
+}@else{
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label> degreee name : </label> <input [placeholder]="degree.name" name="name" type="text" [(ngModel)]="name" />
+  </p>
+  <!-- @for(module of degree.modules; track module ){ -->
+  <label>module name</label>
+  <input type="text" value="module" name="module" [(ngModel)]="module" />
+  <!-- } -->
+  <p>
+    <label>number of years :</label>
+    <input type="text" [placeholder]="degree.noOfYears" name="noOfYears" [(ngModel)]="noOfYears" />
+  </p>
+  <p>
+    <label>faculty :</label> <input type="text" [placeholder]="degree.falcalty" name="falcalty"  [(ngModel)]="falcalty" />
+  </p>
+  <p><label>cost :</label> <input type="text" [placeholder]="degree.cost" name="cost" [(ngModel)]="cost" /></p>
+  <button id="sub" type="submit" >submit</button>
+</form>
+
+}
+<router-outlet />

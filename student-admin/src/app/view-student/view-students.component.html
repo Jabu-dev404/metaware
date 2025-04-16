@@ -1,9 +1,40 @@
-<p>view-students works!</p>
 
-@for(student of students;track student.studentNo ){
-
-    <h2>{{student.name}}</h2>
-    <h2>{{student.surname}}</h2>
-    <h2>{{student.studentNo}}</h2>
+<div id="container">
+    <table>
+        <thead>
+            <tr>
+                <div class="box">
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th> registractionDate</th>
+                    <th>Degree</th>
+                </div>
+            </tr>
+        </thead>
+    <tbody>
     
-}
+        @for(student of students;track student.studentNo ){
+            <tr>
+                <div class="a">
+                    <td>{{$index+1}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.surname}}</td>
+                    <td>{{student.registration.year}}</td>
+                    <td>{{student.registration.degree.name}}</td>
+                     
+                </div>
+            </tr>
+    
+    
+    }
+    <!-- <li>{{ 'Name : ' + student.name + "  " +'Surname :' + student.surname + "  " + 'Registrations :' + student.registration.year + "   " + 'Degree :' + student.registration.degree.name}}</li>  -->
+    
+    
+    <tbody>
+    </table>
+
+</div>
+
+
+
