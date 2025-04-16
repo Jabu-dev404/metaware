@@ -1,0 +1,17 @@
+button {
+    border: none;
+    font-weight: bold;
+}
+
+span {
+    font-weight: lighter;
+}
+
+#sub {
+    
+    cursor: pointer;
+}
+
+#sub:hover {
+    background-color: #0C0950;
+}

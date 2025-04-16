@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, DoCheck, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../data.service';
 import { Student } from '../../models/student.model';
@@ -12,6 +12,7 @@ import { Degree } from '../../models/degree.model';
   styleUrl: './capture-student.component.css'
 })
 export class CaptureStudentComponent {
+  
   private dataService = inject(DataService);
   private awarded = false;
  
@@ -23,6 +24,8 @@ export class CaptureStudentComponent {
   enteredSurname = ' ';
   enteredYears = ' ';
   enteredDegree = ' ';
+
+
   
   
   get degrees() {

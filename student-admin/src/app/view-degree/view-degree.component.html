@@ -1,17 +1,23 @@
-@for(degree of degrees ;track degree.name){ 
+<div id="box">
+
+   <div id="header">Degrees</div>
+   @for(degree of degrees ;track degree.name){ 
+      <div >
+         <button id="degree" [routerLink]="[degree.name,'degreeDetails']">{{ degree.name }}</button>
+       </div>
+   
+      <!-- @if(degree.edit === false){
    <div>
-      <button [routerLink]="[degree.name,'degreeDetails']">{{ degree.name }}</button>
-    </div>
-
-   <!-- @if(degree.edit === false){
-<div>
-  <button [routerLink]="[degree.name, 'editDegree']">{{ degree.name }}</button>
+     <button [routerLink]="[degree.name, 'editDegree']">{{ degree.name }}</button>
+   </div>
+   }@else {
+      <form>
+         <p><input type="text" name="enteredName" [value]="degree.name"   [(ngModel)]="enteredName" required> <button type="submit" (click)="onSubmit(degree)">done</button><button>delete</button> </p>
+     </form>
+   
+   } } -->
+   }
+   <div id="router">
+      <router-outlet />
+   </div>
 </div>
-}@else {
-   <form>
-      <p><input type="text" name="enteredName" [value]="degree.name"   [(ngModel)]="enteredName" required> <button type="submit" (click)="onSubmit(degree)">done</button><button>delete</button> </p>
-  </form>
-
-} } -->
-}
-<router-outlet />

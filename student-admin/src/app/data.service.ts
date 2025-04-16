@@ -34,11 +34,35 @@ export class DataService {
     
     private degrees: Degree[] = []
     private students: Student[] = []
-    option = [{
-        id: "o1",
-        name: 'Register'
+    option = [
+        {
+            optionId: "01",
+            name: 'Capture student'
+            },
+            {
+                optionId: "02",
+                name: 'view students'
+                },
 
-    }]
+                {
+                    optionId: "03",
+                    name: 'capture results'
+                    },
+
+                    {
+                        optionId: "04",
+                        name: 'view results'
+                        },
+                        {
+                            optionId: "05",
+                            name: 'capture degree'
+                            },
+                            {
+                                optionId: "06",
+                                name: 'view degree'
+                                },
+]
+
 
     degree = {
         name :'',
@@ -49,8 +73,9 @@ export class DataService {
         edit : false
     }
     captureDegree(degree: Degree) {
-        degree.edit = false
+         degree.edit=false
         this.degrees.push(degree)
+         
     }
 
     get viewDegree() {
@@ -90,7 +115,7 @@ export class DataService {
     edit(name : string){
         console.log(name + "im service");
         this.degrees.find((d)=> d.name === name)!.edit = true;
-        this.router.navigate(['viewDegree', this.degrees.find((d)=> d.name === name)!.name,'degreeDetails'])
+        this.router.navigate(['06', this.degrees.find((d)=> d.name === name)!.name,'degreeDetails'])
 
     //    console.log(this.degrees.findIndex((d)=> d.name === name)!  + " found")
     }
@@ -101,7 +126,7 @@ export class DataService {
         this.degrees.find((d)=> d.name === degree.name)!.falcalty = degreeNewName.falcalty
         this.degrees.find((d)=> d.name === degree.name)!.modules = degreeNewName.modules
         this.degrees.find((d)=> d.name === degree.name)!.cost = degreeNewName.cost
-        this.router.navigate(['viewDegree', degreeNewName.name,'degreeDetails'])
+        this.router.navigate(['06', degreeNewName.name,'degreeDetails'])
 
 
     }

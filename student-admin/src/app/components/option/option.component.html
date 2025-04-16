@@ -1,5 +1,5 @@
 @for(option of options; track option.optionId) {
-    <div class="options" [routerLink]="[option.optionId, 'controller']">
+    <div class="options" [routerLink]="[option.optionId]">
         {{ option.name }}
     </div>
 }

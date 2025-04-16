@@ -1,0 +1,16 @@
+.box {
+       display: flex;
+       gap: 80px;
+       font-weight: bolder;
+}
+
+.a {
+       display: flex;
+       justify-content: space-between;
+        gap: 90px;
+        background-color: aqua;
+}
+
+#container {
+       margin-top: 10px;
+}

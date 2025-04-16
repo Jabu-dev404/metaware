@@ -2,11 +2,11 @@
 <p>
     
   <!-- <button [routerLink]="[degree.name,'editDegree']"  >degree name: {{ degree.name }}</button> -->
-  <button [routerLink]="['editDegree']">degree name: {{ degree.name }}</button>
+  <button  [routerLink]="['editDegree']">degree name: {{ degree.name }}</button>
 </p>
 @for(module of degree.modules; track module ){
 <p>
-  <button [routerLink]="['editDegree']">module name :{{ module }}</button>
+  <button [routerLink]="['editDegree']">module name : <span>{{ module }}</span></button>
 </p>
 
 }
@@ -36,7 +36,7 @@
     <label>faculty :</label> <input type="text" [placeholder]="degree.falcalty" name="falcalty"  [(ngModel)]="falcalty" />
   </p>
   <p><label>cost :</label> <input type="text" [placeholder]="degree.cost" name="cost" [(ngModel)]="cost" /></p>
-  <button type="submit" >submit</button>
+  <button id="sub" type="submit" >submit</button>
 </form>
 
 }
