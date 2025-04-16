@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input} from '@angular/core';
 import { DataService } from '../../data.service';
 import { RouterLink } from '@angular/router';
 
@@ -11,7 +11,6 @@ import { RouterLink } from '@angular/router';
 })
 export class OptionComponent {
 private dataService = inject(DataService);
-
  options = this.dataService.option
 }
 

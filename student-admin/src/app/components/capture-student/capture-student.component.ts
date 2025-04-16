@@ -14,9 +14,16 @@ import { Degree } from '../../models/degree.model';
 export class CaptureStudentComponent {
   private dataService = inject(DataService);
   private awarded = false;
+<<<<<<< HEAD
   private studentNo = this.dataService.viewStudents.length + " ";
   
   selectedDegree!:Degree;
+=======
+ 
+  private studentNo = this.dataService.viewStudents.length + " ";
+  selectedDegree!:Degree
+ 
+>>>>>>> 4b1feb68bfe5dc08bd3f89cc3873587862135e96
 
   enteredName = ' ';
   enteredSurname = ' ';
