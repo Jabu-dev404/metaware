@@ -15,7 +15,11 @@ export class CaptureResultsComponent {
   
   enteredStudentNumber = '';
   
-
+  name ='';
+  surname = '';
+  studentNo = '';
+  degree = '';
+  modules = '';
 
 
   constructor(private dataService :DataService){
@@ -23,17 +27,54 @@ export class CaptureResultsComponent {
   }
   onSumbit(){
 
-    this.dataService.captureResults(this.enteredStudentNumber);
     
-    }
+    this.dataService.captureResults(this.enteredStudentNumber);
+
+    
+    
+    
+  }
+
+  
+  
+
+  
+
+  
 
    get results(){
+    
    return this.dataService.match
     }
 
     save(){
+      let data = this.modules.split(",");
+
+      this.dataService.saveResults({
+        name:this.name,
+        surname: this.surname,
+        studentNo: this.studentNo,
+        modules:data
+
+      });
+    
+
+    
+    
+   
+    
+  } 
+    
+
       
-    }
+      
+    
+
+    
+      
+
+    
+    
 
   }
 

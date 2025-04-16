@@ -6,3 +6,11 @@ export interface Student {
     surname:string
     registration:Registration
 }
+
+
+export interface ViewResults{
+    name:string
+    surname: string
+    studentNo: string
+    modules:string[]
+}

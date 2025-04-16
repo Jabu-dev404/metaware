@@ -1,7 +1,10 @@
+
+
+
 <div id="form">
 
-    <form (ngSubmit)="onSumbit()">
-        <h1>Capture Results</h1>
+    <form (ngSubmit)="onSumbit()" >
+        <h1>Search A Student</h1>
 
        
 
@@ -9,7 +12,7 @@
 
         <p>
             <label for="studentnumber">Student Number</label>
-            <input id="studentnumber" name="studentnumber" type="string" [(ngModel)]="enteredStudentNumber"/>
+            <input id="studentnumber" name="enteredStudentNumber" type="text" [(ngModel)]="enteredStudentNumber"/>
         </p>
 
         
@@ -21,38 +24,62 @@
 
     </form>
 </div>
+@if(results.studentNo){
+<div>
+    <form id="forms" >
+        <h1>Student Information</h1>
+       <p> <label for="name">Name:{{results.name}}</label></p>
+       <p> <label for="surname">Surname:{{results.surname}}</label></p>
+        <p><label for="studentnumber">StudentNumber:{{results.studentNo}}</label></p> 
+         <p><label for="degree">Degree:{{results.registration.degree.name}}</label></p>
+         <h3>Modules</h3>
+        @for(module of results.registration.degree.modules ; track module){ 
+            
+           <p> 
+                        {{module}}
+                         
+           </p> 
+        
+        } 
+        
+        
+    </form> 
+</div>
+
+
+} 
+@else {
+    <p>Student not found</p>
+} 
+
 
 <div>
-    <form id="forms">
-        <h1>Student Information</h1>
-       <p> <label for="name">{{results.name}}</label></p>
-       <p> <label for="surname">{{results.noOfYears}}</label></p>
-        <p><label for="studentnumber">{{results.cost}}</label></p>
+   <form (ngSubmit)="save()">
+    <h1>Capture Results</h1>
+<p>
+    <label>Name</label>
+    <input name="name" type= "string" [(ngModel)]="name"/>
+</p>
+<p>
+    <label>Surname</label>
+    <input name="surname" type= "string" [(ngModel)]="surname"/>
 
-        @for(module of results.modules ; track module){
-            
-           <p>
-                {{module}} <select name="">
-                    <option value="" data-display="">
-                        
-                    </option>
-                    <option>
-                        pass
+</p>
 
-                    </option>
-                    <option>
-                        fail
-                    </option>
-                </select>
-            </p>
-        
-        }
+<p>
+    <label>StudentNumber</label>
+    <input name="studentNo" type= "string" [(ngModel)]="studentNo"/>
 
+</p>
+<p>
+    <label>Modules</label>
+    <input name="module" type= "string" [(ngModel)]="modules"/>
 
-        <button>Save</button>
-
-
-    </form>
+</p>
+    
+    <button>Save</button>
+   </form>
+   </div>
     
     
-</div>
+

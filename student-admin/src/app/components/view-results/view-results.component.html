@@ -8,4 +8,49 @@
  <button>Submit</button>
 </form>
   </div> 
+
+  @if(viewResults.studentNo){
+<div  >
+  <h1>Student Results</h1>
+  <form (ngSubmit)="onCancel()">
+<p>
+    <label>{{viewResults.name}}</label>
     
+    </p>
+    
+    <p>
+      <label>{{viewResults.surname}}</label>
+      
+      </p> 
+
+      <p>
+        <label>{{viewResults.studentNo}}</label>
+        
+        </p>
+        
+        <h3>Modules</h3>
+        @for(module of viewResults.modules ; track module){ 
+            
+           <p> 
+                        {{module}}
+                         
+            </p>
+
+            
+
+              
+           
+        
+        } 
+        <button>Log-Out</button>
+          
+
+          
+
+  </form>
+  </div>
+    
+  }
+  @else {
+    <p>Invalid Student number </p>
+  }
